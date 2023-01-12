@@ -2,7 +2,7 @@
 #SBATCH --job-name='paper_run'
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=232GB
+#SBATCH --mem=128GB
 #SBATCH --output=paper_run_%j.log
 #SBATCH --time=24:00:00
 #SBATCH -p hera
@@ -23,10 +23,10 @@ fi
 
 source  ~/miniconda3/etc/profile.d/conda.sh; conda activate frf_paper
 
-
 date
 
 papermill $1 $output
 
 
 date
+
